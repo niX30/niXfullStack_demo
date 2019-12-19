@@ -25,19 +25,19 @@ export default {
       formLabelWidth: '60px'
     }
   },
-  // created(){
-  //    this.$http.post('/api/user/userList', {})
-  //     .then((response) => {
-  //       console.log(response);
-  //       if(response.status === 200){
-  //         this.tableData = response.data;
-  //       }
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //       this.$message.error('loading failed!');
-  //     });
-  // },
+  created(){
+     this.$http.post('/api/user/userList', {})
+      .then((response) => {
+        console.log(response);
+        if(response.status === 200){
+          this.tableData = response.data;
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        this.$message.error('loading failed!');
+      });
+  },
   methods: {
     addUser() {
       var name = this.name;
