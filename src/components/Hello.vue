@@ -54,7 +54,6 @@ export default {
             message: `Hello ${name} you have added successfully!`,
             type: 'success'
           });
-          this.userList();
         }
       })
       .catch(function (error) {
