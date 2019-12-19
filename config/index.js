@@ -8,16 +8,6 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        target: 'http://127.0.0.1:3000/api/', //不要写localhost
-        // target: 'http://192.168.56.101/api/', //不要写localhost
-        changeOrigin: true, //true允许跨域
-        pathRewrite: {
-          '^/api': '' //需要rewrite重写的，如果在服务器端做了处理则可以不要这段
-        }
-      }
-    },
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
@@ -39,8 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        // target: 'http://127.0.0.1:3000/api/', //不要写localhost
-        target: 'http://192.168.56.101/api/', //不要写localhost
+        target: 'http://127.0.0.1:3000/api/', //不要写localhost
         changeOrigin: true, //true允许跨域
         pathRewrite: {
           '^/api': '' //需要rewrite重写的，如果在服务器端做了处理则可以不要这段
