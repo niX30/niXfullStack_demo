@@ -43,7 +43,7 @@ export default {
       var name = this.name;
       var sirname = this.sirname;
       // this.$http.post('http://127.0.0.1:3000/api/user/addUser', {
-      this.$http.post('/user/addUser', {
+      this.$http.post('/api/user/addUser', {
         name: name,
         sirname: sirname
       })
