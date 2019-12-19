@@ -26,23 +26,24 @@ export default {
     }
   },
   created(){
-     this.$http.post('/api/user/userList', {})
-      .then((response) => {
-        console.log(response);
-        if(response.status === 200){
-          this.tableData = response.data;
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-        this.$message.error('loading failed!');
-      });
+    //  this.$http.post('/api/user/userList', {})
+    //   .then((response) => {
+    //     console.log(response);
+    //     if(response.status === 200){
+    //       this.tableData = response.data;
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //     this.$message.error('loading failed!');
+    //   });
   },
   methods: {
     addUser() {
       var name = this.name;
       var sirname = this.sirname;
-      this.$http.post('http://127.0.0.1:3000/api/user/addUser', {
+      // this.$http.post('http://127.0.0.1:3000/api/user/addUser', {
+      this.$http.post('/api/user/addUser', {
         name: name,
         sirname: sirname
       })
